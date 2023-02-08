@@ -4,7 +4,7 @@ import numpy as np
 
 class detectFace():
     def __init__(self):
-        self.CLASSIFIER = cv2.CascadeClassifier('C://Users//VTCODE//Documents//identify_human//sources//Models//haarcascade_frontalface_default.xml')
+        self.CLASSIFIER = cv2.CascadeClassifier('Models//haarcascade_frontalface_default.xml')
 
 # We load the xml file
     def detectFace(self, image,size):

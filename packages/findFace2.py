@@ -26,7 +26,7 @@ class findFace():
     def __init__(self ):
         # create a vggface model
         # self.model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
-        self.model  = tf.keras.models.load_model('sources/model_embedding')
+        self.model  = tf.keras.models.load_model('model_embedding')
         self.required_size = (224,224)
         
 

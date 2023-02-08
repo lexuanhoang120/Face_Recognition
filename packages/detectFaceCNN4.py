@@ -6,8 +6,6 @@ Function : find matching face in faces
 
 """
 
-from array import array
-from pickletools import read_uint1
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
@@ -27,14 +25,14 @@ class detectFace():
 
         # initiate path for several model
         # self.prototxtPath = os.path.sep.join(["Models", "deploy.prototxt"])
-        self.prototxtPath = "sources/Models/deploy.prototxt"
-        self.weightsPath = "sources/Models/res10_300x300_ssd_iter_140000.caffemodel"
+        self.prototxtPath = "Models/deploy.prototxt"
+        self.weightsPath = "Models/res10_300x300_ssd_iter_140000.caffemodel"
         # self.weightsPath = os.path.sep.join(["Models",
         #     "res10_300x300_ssd_iter_140000.caffemodel"])
-        self.maskNet = load_model("sources/Models/mask_detector.model")
+        self.maskNet = load_model("Models/mask_detector.model")
         self.faceNet = cv2.dnn.readNet(self.prototxtPath, self.weightsPath)
-        result = self.detectFace(cv2.imread("photo_2022-11-22_14-19-29.jpg"))
-        print(result)
+        # result = self.detectFace(cv2.imread("photo_2022-11-22_14-19-29.jpg"))
+        # print(result)
         
     def detectFace(self,frame):
         # grab the dimensions of the frame and then construct a blob

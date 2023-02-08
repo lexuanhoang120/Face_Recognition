@@ -15,7 +15,7 @@ import numpy as np
 import cv2
 def get_embedding():
     print(" ----------------- Start get embedding -----------------")
-    ABSOLUTE_DIR = os.getcwd() + '/sources/dataset/'
+    ABSOLUTE_DIR = os.getcwd() + 'dataset/'
     identifier = identifyFace()
     folders = os.listdir(ABSOLUTE_DIR)
     embeddingStaff = np.array([])
@@ -36,8 +36,8 @@ def get_embedding():
                 codeStaff = np.append(codeStaff,[folder], axis = 0)
             except:
                 logging.warning(f'Cannot read image: {folder}/{file}')
-    np.save('sources//embeddingNPY//embedingStaff.npy',embeddingStaff)
-    np.save('sources//embeddingNPY//codeStaff.npy',codeStaff)
+    np.save('embeddingNPY//embedingStaff.npy',embeddingStaff)
+    np.save('embeddingNPY//codeStaff.npy',codeStaff)
     print(" ----------------- End get embedding -----------------")
     return embeddingStaff,codeStaff
 
