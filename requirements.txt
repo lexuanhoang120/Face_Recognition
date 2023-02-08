@@ -1,0 +1,9 @@
+opencv-python
+imutils
+pyttsx3
+pyodbc
+pymssql
+Pillow
+keras-vggface
+Keras-Applications
+pip install "tensorflow<2.11"
