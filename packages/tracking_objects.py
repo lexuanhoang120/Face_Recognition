@@ -43,8 +43,6 @@ class CentroidTracker:
         self.identify = findFace()
         self.rect_identify = np.array([])
         self.embedding_staff,self.code_staff = get_embedding()
-        result = self.identify.findFace(self.identify.getEmbedding(cv2.imread("sources//dataset//VTCODE02352//IMG_1760.JPG")), self.embedding_staff)
-        print(result)
         # self.code_staff = np.load('sources\embeddingNPY\codeStaff.npy')
         # self.embedding_staff = np.load('sources\embeddingNPY\embedingStaff.npy')
         threading.Thread(target=self.alert, args=()).start()
