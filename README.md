@@ -2,7 +2,7 @@
 
 Real-time face recognition that automatically clocks employees in and out using an office camera. It detects faces, figures out who's who, logs their attendance, and greets them by name.
 
-**[▶ Watch demo](https://user-images.githubusercontent.com/83819024/217428805-baf58624-2f68-4c48-a434-0d7f6f9afd88.mp4)**
+https://user-images.githubusercontent.com/83819024/217428805-baf58624-2f68-4c48-a434-0d7f6f9afd88.mp4
 
 ---
 
